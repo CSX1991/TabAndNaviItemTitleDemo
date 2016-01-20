@@ -2,21 +2,56 @@
 //  AppDelegate.m
 //  HtmlDemo
 //
-//  Created by 田司 on 15/12/30.
+//  Created by SSS on 15/12/30.
 //  Copyright © 2015年 ST. All rights reserved.
 //
 
 #import "AppDelegate.h"
-
+#import "OneViewController.h"
+#import "TwoViewController.h"
+#import "ThirdViewController.h"
+#import "FourViewController.h"
+#import "MainViewController.h"
+#define TYPE 1
 @interface AppDelegate ()
-
+{
+    UITabBarController *tabbar;
+    
+}
 @end
 
 @implementation AppDelegate
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    
+    MainViewController *main = [[MainViewController alloc]init];
+    UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:main];
+    
+//    // Override point for customization after application launch.
+//    OneViewController * VC1 = [[OneViewController alloc] init];
+//     VC1.tabBarItem.title=@"春天";
+//    TwoViewController * VC2 = [[TwoViewController alloc] init];
+//     VC2.tabBarItem.title=@"夏天";
+//    
+//    ThirdViewController * VC3 = [[ThirdViewController alloc] init];
+//    VC1.tabBarItem.title=@"秋天";
+//    FourViewController * VC4 = [[FourViewController alloc] init];
+//    VC2.tabBarItem.title=@"冬天";
+//    　   //a.初始化一个tabBar控制器
+//        UITabBarController *tabBarViewController=[[UITabBarController alloc]init];
+//         //设置控制器为Window的根控制器
+//        self.window.rootViewController=tabBarViewController;
+//    
+//    tabBarViewController = [[UITabBarController alloc]init];
+//    [self.window setRootViewController:tabBarViewController];
+//    if (TYPE == 1) {
+//         tabBarViewController.viewControllers=@[VC1,VC2];
+//    }else{
+//         tabBarViewController.viewControllers=@[VC3,VC4];
+//    }
+    self.window.rootViewController = nav;
+//    self.window.rootViewController = tb;
     return YES;
 }
 
